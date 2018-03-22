@@ -13,6 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let screenSize: CGRect = self.view.bounds
+        let testDraw = DrawOfUIView(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height))
+        self.view.addSubview(testDraw)
+        //        testDraw.isOpaque = false
+        self.view.backgroundColor = UIColor(red: 0.2, green: 0.2, blue: 1.0, alpha: 1.0)
     }
 
     override func didReceiveMemoryWarning() {
